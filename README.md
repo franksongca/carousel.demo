@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Dependency
 npm install ngx-bootstrap bootstrap@4.0.0-beta jquery popper.js --save
+
+## carousel
+https://github.com/sguti/ng2-owl-carousel2
