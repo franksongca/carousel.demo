@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ngx-bootstrap/alert';
-
-import { CarouselModule } from '../../node_modules/ngx-bootstrap/carousel';
+import { Ng2OwlCarouselComponent } from "ng2-owl-carousel2"
 
 import { AppComponent } from './app.component';
 import { ComingSoonComponent } from './components/coming.soon/coming.soon.component';
@@ -35,17 +34,22 @@ import { FooterComponent } from './components/pages/footer/footer.component';
     ProductsComponent,
     ServicesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    Ng2OwlCarouselComponent
   ],
   imports: [
     AlertModule.forRoot(),
     HttpModule,
-    BrowserModule,
-    CarouselModule.forRoot()
+    BrowserModule
+
   ],
   providers: [
     ConfigService,
     ActionService
+  ],
+
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   bootstrap: [AppComponent]
 })
